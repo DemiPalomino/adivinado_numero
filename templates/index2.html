@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Número</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Formulario para adivinar el número -->
+    <form method="post">
+        <h1>Adivinando el numero</h1>
+        <b><label for="intento">Introduce tu intento (1-100):</label></b>
+        <input type="number" name="intento" id="intento" min="1" max="100" required
+            placeholder="Introduce tu intento (1-100):">
+        <button class="button-85" role="button">Adivina</button>
+        {% if mensaje %}
+        <b><p>{{ mensaje }}</p></b>
+        {% endif %}
+    </form>
+
+    <!-- Mostrar mensaje después de intentar adivinar -->
+    <!-- {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% endif %} -->
+    <!-- 
+    <div class="button-container">
+        <a href="/"><button class="button-91" role="button">Al inicio</button></a>
+    </div> -->
+</body>
+
+</html>
